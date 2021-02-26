@@ -11,7 +11,7 @@
          <!-- LINK/BUTTON TO RESTAURANT LIST INDEX -->
         <div class="btn-container">
             <div class="button" id="learn-more">
-                <a href="{{ route('restaurants.index') }}">Scopri di più</a>
+                <a href="{{ route('restaurants.index') }}">EAT NOW</a>
             </div>
         </div>      
         <div class="img-container" id="lilgirl">

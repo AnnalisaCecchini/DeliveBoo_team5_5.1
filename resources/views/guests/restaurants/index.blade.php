@@ -3,19 +3,19 @@
 @section('content')
 <body id="index">
 <div id="filter" class="container">
-    <h1 class="text-center mt-5 mb-3 text-primary">SEARCH YOUR RESTAURANT</h1>
+    <h1 class="text-center mt-5 pt-5 mb-3 text-primary">SEARCH YOUR RESTAURANT</h1>
 
     {{-- SEARCH --}}
     <div class="research-container">
-            <label for="name">Insert name or part of the name of the Restaurant: </label>
+            <label class="text-center" for="name">Insert name or part of the name of the Restaurant: </label>
             <input type="text" name="name" v-model="name" {{-- v-on:keyup="filter" --}}>
             {{-- <button @click="filter" 
             >Find Restaurant!
             </button> --}}
-            <p >And / Or choose what you'd like to eat:</p>
+            <p class="text-center mt-2" >And / Or choose what you'd like to eat:</p>
             <ul class="restype-checkbox">
                 @foreach ($restypes as $restype)
-                <div class="switch-container">
+                <div class=" text-center switch-container">
                     <span>{{ $restype->restypes_status }}</span>
                     <li class="toggle">
                         <input type="checkbox" id="{{ $restype->id }}" value="{{ $restype->id }}" v-model="restypes"
@@ -26,16 +26,17 @@
                    
                 @endforeach
             </ul>
-            
-                <button class="button" @click="filter" > Find !
-            </button>
+            <div class="d-flex justify-content-center">
+                <button class="text-center btn btn-primary button" @click="filter" > Find !</button>
+            </div>
+                
                 
            
         
     </div>
 
     {{-- SHOW RESULTS --}}
-    <div>
+    <div class="text-center mt-3">
         <h4>List of choice, upon your research: </h4>
         <div v-if="filteredRestaurants.length > 0">
             

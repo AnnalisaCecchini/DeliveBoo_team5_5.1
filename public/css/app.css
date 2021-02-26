@@ -11298,6 +11298,15 @@ header #header-navbar #navbar-links {
   margin-right: 20px;
 }
 
+.card-header {
+  position: relative;
+  z-index: 1;
+}
+
+#filter .research-container {
+  margin: auto;
+}
+
 @media screen and (max-width: 991px) {
   #lilgirl {
     display: none;
