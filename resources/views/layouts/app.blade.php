@@ -45,7 +45,7 @@
                             <a class="nav-link" href="{{ route('cart.index') }}">
                                 Cart
 
-                                <div class="badge badge-danger">
+                                <div class="badge badge-primary">
                                     {{\Cart::session('_token')->getContent()->count()}}
                                 </div>
                             </a>

@@ -45,7 +45,7 @@
                         </div>
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-ul">
-                            <li class="button" id="search-restaurant">
+                            <li class="button button__search" id="search-restaurant">
                                 <a  href="{{ route('restaurants.index') }}">Search Restaurant</a>
                             </li>
                         </ul>
@@ -66,7 +66,7 @@
                                     <a class="nav-link" href="{{ route('cart.index') }}">
                                      Cart
 
-                                    <div class="badge badge-danger">
+                                    <div class="m-1 badge badge-primary">
                                         {{\Cart::session('_token')->getContent()->count()}}
                                     </div>
                                     </a>

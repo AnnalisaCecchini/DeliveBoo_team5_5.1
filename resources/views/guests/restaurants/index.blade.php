@@ -51,7 +51,7 @@
                <div  class="container-card">
                      <div class="card" id="zumba">
                          <div class="img-bx">
-                             <!-- <img src="@{{ filteredRestaurant.path_image }}" alt=""> -->
+                            <img class="rounded" width=200 src="{{ asset('img/pizza.png' ) }}" alt="">
                          </div>
                          <div class="content-bx">
                              <h2>@{{ filteredRestaurant.name }}</h2>

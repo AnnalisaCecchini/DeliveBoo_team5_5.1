@@ -6,9 +6,33 @@
 }
 .button{
     position: relative;
-    width: 155px;
-    height: 50px;
+    text-align: center;
+    width: 100px;
+    height: 40px;
     margin: 10px 40px 0 0;
+
+    &__search {
+        padding: 1rem 4rem;
+
+
+        a {
+            color: $second-col;
+            line-height: 1;
+
+            &:hover {
+                color: $second-col;
+            }
+        }
+    }
+
+    &__CTA {
+        padding: 2rem 6rem;
+
+        a {
+            font-size: 2rem;
+        }
+    }
+
     a{
         outline: none;
         position: absolute;
@@ -20,8 +44,8 @@
         justify-content: center;
         align-items: center;
         background: rgba(255,255,255,0.1);
-        border: 2px solid $second-col;
-        border-radius: 30px;
+        border: 1px solid $second-col;
+        border-radius: 10px;
         color: $second-col;
         z-index: 1;
         text-decoration: none;
@@ -52,7 +76,7 @@
     bottom: 0;
     height: 50%;
     width: 80%;
-    border-radius: 30px;
+    border-radius: 5%;
     transition-delay:0.5s ;
 }
 //pseudclass

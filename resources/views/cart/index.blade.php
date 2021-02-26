@@ -46,7 +46,7 @@
         </h3>
 
         <div class="d-flex justify-content-center mt-4"> 
-            <a role="button" class="btn btn-primary" href="{{ route('cart.checkout') }}">Chekoutt</a>
+            <a role="button" class="btn btn-primary" href="{{ route('cart.checkout') }}">Chekout</a>
         </div>
 
 

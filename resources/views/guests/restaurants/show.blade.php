@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 
-    <h1 class="text-center mt-5 mb-3">Welcome to <span class="text-primary font-weight-bold"> {{ $restaurant->name }}</span> restaurant</h1>
+    <h1 class="text-center mt-5 pt-4 mb-3">Welcome to <span class="text-primary font-weight-bold"> {{ $restaurant->name }}</span> restaurant</h1>
     <p class="mb-2 text-center">
         <span class="font-weight-bold">Restaurant tags:</span>
         @forelse ($restaurant->restypes as $restype)
@@ -14,11 +14,11 @@
     </p>
     <div class="d-flex justify-content-center my-4">
         {{-- {-- IMG ! empty --}}
-        @if (!empty($restaurant->path_image))
+        {{-- @if (!empty($restaurant->path_image))
             <img class="rounded" width=200 src="{{ asset('storage/' . $restaurant->path_image) }}" alt="{{ $restaurant->name }}">
-        @else
-            <img class="rounded" width=200 src="{{ asset('img/no-img.png' ) }}" alt="{{ $restaurant->name }}">
-        @endif
+        @else --}}
+            <img class="rounded" width=200 src="{{ asset('img/smoothie.png' ) }}" alt="{{ $restaurant->name }}">
+        {{-- @endif --}}
     </div>
     <div class="rounded p-2 row" width=50% style="background: white">
         <h5 class="col-12 mb-5">
@@ -49,11 +49,11 @@
             @if ($dish->visibility == 1)
                     {{-- PRODUCT CARDS --}}
                     <div class="card m-3" style="width: 18rem;">
-                        @if (!empty($dish->path_image))
+                        {{-- @if (!empty($dish->path_image))
                             <img class="card-img-top" width=200 src="{{ asset('storage/' . $dish->path_image) }}" alt="{{ $dish->name }}">
-                        @else
-                            <img class="card-img-top" src="{{ asset('img/no-img.png' ) }}" alt="{{ $dish->name }}">
-                        @endif
+                        @else --}}
+                            <img class="picturefake card-img-top" src="{{ asset('img/hamburger.png' ) }}" alt="{{ $dish->name }}">
+                        {{-- @endif --}}
                         <div class="card-body">
                             <div class="card-header">
                                 <h5>{{ $dish->name }}</</h5>
