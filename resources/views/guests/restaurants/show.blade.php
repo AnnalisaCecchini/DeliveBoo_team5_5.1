@@ -20,7 +20,7 @@
             <img class="rounded" width=200 src="{{ asset('img/smoothie.png' ) }}" alt="{{ $restaurant->name }}">
         {{-- @endif --}}
     </div>
-    <div class="rounded p-2 row" width=50% style="background: white">
+    <div class="searchbar rounded p-2 row" width=50% style="background: white">
         <h5 class="col-12 mb-5">
             <span class="font-weight-bold">Who we are:</span>
             {{ $restaurant->body }}

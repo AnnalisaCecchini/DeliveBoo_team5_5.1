@@ -2,10 +2,10 @@
 
 @section('content')
 <div class="container">
-   <h1 class="text-center mt-5 mb-5 text-primary">YOUR CART</h1>
+   <h1 class="text-center mt-5 mb-5 text-primary font-weight-bold ">YOUR CART</h1>
 
    
-       <table class="m-auto">
+       <table class="searchbar m-auto">
            <thead>
             <tr>
                <th>Name</th>

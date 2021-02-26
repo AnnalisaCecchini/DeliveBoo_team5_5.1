@@ -11334,6 +11334,12 @@ header #header-navbar #navbar-links {
   z-index: 1;
 }
 
+.card,
+.searchbar {
+  border: 2px solid #00ccbc;
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 991px) {
   #lilgirl {
     display: none;

@@ -3,10 +3,10 @@
 @section('content')
 <body id="index">
 <div id="filter" class="container">
-    <h1 class="text-center mt-5 pt-5 mb-3 text-primary">SEARCH YOUR RESTAURANT</h1>
+    <h1 class="font-weight-bold text-center mt-5 pt-5 mb-3 text-primary">SEARCH YOUR RESTAURANT</h1>
 
     {{-- SEARCH --}}
-    <div class="research-container">
+    <div class="searchbar research-container">
             <label class="text-center" for="name">Insert name or part of the name of the Restaurant: </label>
             <input type="text" name="name" v-model="name" {{-- v-on:keyup="filter" --}}>
             {{-- <button @click="filter" 
