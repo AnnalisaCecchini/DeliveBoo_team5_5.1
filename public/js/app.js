@@ -49716,9 +49716,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\annal\Downloads\DeliveBoo_team5_5.1\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\Users\annal\Downloads\DeliveBoo_team5_5.1\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\Users\annal\Downloads\DeliveBoo_team5_5.1\resources\sass\admin.scss */"./resources/sass/admin.scss");
+__webpack_require__(/*! /Users/ilariagalliano/Desktop/DeliveBoo_team5_5.1/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /Users/ilariagalliano/Desktop/DeliveBoo_team5_5.1/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /Users/ilariagalliano/Desktop/DeliveBoo_team5_5.1/resources/sass/admin.scss */"./resources/sass/admin.scss");
 
 
 /***/ })

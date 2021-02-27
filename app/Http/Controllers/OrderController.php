@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Order;
+use Braintree\Gateway as Gateway;
 
 class OrderController extends Controller
 {
@@ -14,7 +15,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -62,12 +63,19 @@ class OrderController extends Controller
            // prezzo?? quantità??
         } */
 
-        
-        if($ordersaved){
-            return  'thank you for your order :)';
-        } else{
-            return 'azzzz';
-        }
+       
+        // credentials
+        $gateway = new Gateway([
+            'environment' => config('services.braintree.environment'),
+            'merchantId' => config('services.braintree.merchantId'),
+            'publicKey' => config('services.braintree.publicKey'),
+            'privateKey' => config('services.braintree.privateKey')
+        ]);
+
+        // to generate the token 
+        $token = $gateway->ClientToken()->generate();
+
+        return view('orders.index', ['token' => $token]);
 
        /*  if($sav){
             // Se restypes_status non è vuoto, fare questo per unire i restypes e i restaurant nella pivot 

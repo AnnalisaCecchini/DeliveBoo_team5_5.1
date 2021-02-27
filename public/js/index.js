@@ -104,7 +104,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\annal\Downloads\DeliveBoo_team5_5.1\resources\js\index.js */"./resources/js/index.js");
+module.exports = __webpack_require__(/*! /Users/ilariagalliano/Desktop/DeliveBoo_team5_5.1/resources/js/index.js */"./resources/js/index.js");
 
 
 /***/ })
