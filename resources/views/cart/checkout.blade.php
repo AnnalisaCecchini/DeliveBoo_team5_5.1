@@ -48,7 +48,7 @@
                 <h3 class="font-weight-bold" name="price"> € {{number_Format($total, 2, ',', '') }}</h3>
             </div>
 
-        <div class="button "><a id="no-spacing">Order Now</a></div>
+            <div class="button "><a href="" id="no-spacing">Order Now</a></div>
 
 
         </form>
