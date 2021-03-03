@@ -3,7 +3,6 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
     z-index: 2;
     display: flex;
     justify-content: space-between;
@@ -11,6 +10,7 @@ header{
     transition: 0.5s;
     max-height: 80px;
     background-color: $prime-col;
+    padding: 10px 100px;
     ul{
         list-style: none;
         a{
@@ -39,13 +39,13 @@ header{
 }
 //HAMBURGER MENU
 #hamburger-menu{
-    display: none;
     position: absolute;
     top: 50%;
     right: 5%;
     transform: translateY(-50%);
     color: $second-col;
     font-size: 25px;
+    display: none;
 }
 .toggler{
     position: absolute;
@@ -68,7 +68,7 @@ header{
 .menu{
     position: fixed;
     background-color: $second-col;
-    opacity: 0.8;
+    opacity: 0.9;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,8 +76,9 @@ header{
     height: 100vh;
     top: 0;
     right: 0;
-    padding: 100px;
+    padding: 80px 0;
     display: none;
+    z-index: 2;
     ul a{
         color: white;
         font-size: 30px;
@@ -94,12 +95,14 @@ header{
     font-weight: 600;
     color: white;
     margin: 30px 50px ;
+    display: block;
 }
 //JS EFFECT CLASS STICKY
 .sticky{
     background-color: $prime-col;
-    padding: 10px 100px;
     box-shadow: 0px 5px 20px rgba(0,0,0,0.25);
+    
+    padding: 10px 100px;
 }
 //HOVER
 #logo-title:hover{
@@ -114,4 +117,11 @@ header{
             transition: 0.5s;
         }
     }
+}
+
+#toggleHamburger:hover{
+    cursor: pointer;
+}
+.active-menu{
+    display: block;
 }

@@ -18,28 +18,6 @@
             <img src="{{ asset('img/gir.png') }}" alt="">
         </div>
     </section>
-    <section id="home-section-2">
-        <div class="links-container">
-            <div id="up">
-                <div class="images">
-                    <img src="{{ asset('img/pizza.png') }}" alt="">
-                </div>
-                <div class="images">
-                    <img src="{{ asset('img/smoothie.png') }}" alt="">
-                </div>
-            </div>
-            
-            <div id="down">
-                <div class="images">
-                    <img src="{{ asset('img/sushi.png') }}" alt="">
-                </div>
-                <div class="images">
-                    <img src="{{ asset('img/hamburger.png') }}" alt="">
-                </div>
-            </div>
-           
-        </div>
-    </section>
     <!-- ONLY HOMEPAGE SCRIPT LINK -->
     <script src="{{ asset('js/homepage.js') }}" defer></script>
 </body>

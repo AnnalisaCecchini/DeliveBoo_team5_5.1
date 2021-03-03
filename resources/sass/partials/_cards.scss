@@ -2,24 +2,15 @@
     position: relative;
     .card{
         position: relative;
-        width: 320px;
-        height: 450px;
+        width: 220px;
+        height: 350px;
         border-radius: 20px;
         overflow: hidden;
         background-color: white;
         margin: 20px 10px;
     }
 }
-//after
-#salsa:after{
-    content: "Salsa&Bachata";
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    font-size: 30px;
-    font-weight:600;
-    color: $prime-col;
-}
+
 //before
 .card:before{
     content: "";
@@ -48,8 +39,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
-            width: 200px;
-            height: 250px;
+            width: 100px;
+            height: 125px;
         }
     }
     .content-bx{

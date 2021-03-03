@@ -1,22 +1,35 @@
-
-// AGGIUNTA DA ANNALISA
-.card-header {
-    position: relative;
-    z-index: 1;
+.rest-logo-container{
+    background-color: $prime-col;
+    opacity: 0.8;
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    img{
+        height: 100%;
+    }
 }
-
-#filter .research-container{
-    margin: auto;
+.rest-info-container{
+    margin: 50px 0;
 }
-
-.picturefake {
-    position: relative;
-    z-index: 1;
+.rest-name{
+    color: $second-col;
+    font-weight: 400;
+    font-size: 45px;
 }
-
-.card, 
-.searchbar {
-    border: 2px solid #00ccbc;
+.rest-typology{
+    background-color: $prime-col;
+    padding: 1.5px;
     border-radius: 10px;
+    font-weight: 600;
 }
-
+.dishes-card-container{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    > div{
+        width: 100px;
+        max-width: 100%;  
+        margin: 30px 30px;
+    }
+}

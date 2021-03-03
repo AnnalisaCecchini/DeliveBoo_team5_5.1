@@ -10,8 +10,10 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
     <script src="{{ asset('js/client.js') }}" defer></script>
+    
+    
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet"> 
@@ -30,17 +32,17 @@
 
                     <div id="navbar-links">
                         <!-- Hamburger Icon menu -->
-                        <div class="navbar-ul" id="hamburger-menu">
-                                <div  onclick="toggleHamburger()"><i class="fas fa-bars"></i></div>     
+                        <div  id="hamburger-menu">
+                                <div  id="toggleHamburger"><i class="fas fa-bars" ></i></div>     
                         </div>
                         <div class="menu">
-                            <div class="toggle-menu" id="times" onclick="toggleHamburger()"><i class="fas fa-times"></i></div> 
+                            <div class="toggle-menu" id="times"> <i class="fas fa-times"></i></div> 
                              <ul>
-                                 <li><a href="">Home</a></li>
-                                 <li><a href="">Restaurants</a></li>
-                                 <li><a href="">Login</a></li>
-                                 <li><a href="">Register</a></li>
-                                 <li><a href="">Cart</a></li>
+                                 <li><a href="{{ url('/') }}">Home</a></li>
+                                 <li><a href="{{ route('restaurants.index') }}">Restaurants</a></li>
+                                 <li><a href="{{ route('login') }}">Login</a></li>
+                                 <li><a href="{{ route('register') }}">Register</a></li>
+                                 <li><a href="{{ route('cart.index') }}">Cart</a></li>
                              </ul>      
                         </div>
                         <!-- Left Side Of Navbar -->
@@ -108,9 +110,9 @@
         
         <!--FINE HEADER -->
 
-        <main class="py-4">
+      
             @yield('content')
-        </main>
+        
     </div>
 </body>
 </html>

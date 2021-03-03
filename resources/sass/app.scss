@@ -8,12 +8,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import "partials/swiper";
 
-
+@import "partials/common";
 @import "partials/header";
 @import "partials/home";
 @import "partials/index";
 @import "partials/show";
+@import "partials/cart";
+@import "partials/order";
 
 
 

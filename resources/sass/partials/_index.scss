@@ -1,12 +1,11 @@
 
 
-  #index{
-    background-color: white;
-  }
+
 #restaurants-filtered{
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  padding: 0;
   li{
     list-style: none;
   }
@@ -19,12 +18,11 @@
   padding: 30px 70px;
   border-radius: 10px;
   margin: 100px 50px 100px 0;
+  color: #111;
+  font-weight: 600;
 }
 .restype-checkbox{
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  li{
-    margin-right: 20px;
-  }
+  width: 100%;
 }

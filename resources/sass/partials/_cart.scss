@@ -1,0 +1,63 @@
+#cart-index{
+    background-color: $prime-col;
+    border-radius: 10px;
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px 40px;
+    width: 800px;
+    max-width: 90%;
+    #dish-quantity{
+        width: 100px;
+        height: 25px;
+        color: $second-col;
+        font-size: 17px;
+        text-align: center;
+    }
+    #tr{
+        display: flex;
+
+    }
+    #tr-voices{
+        display: flex;
+    }
+}
+.cart-info-complete{
+    display: flex;
+    .cart-functionalities,
+    .cart-info{
+    display: flex;
+    align-items: center;
+    color: #111;
+    >form{
+        display: flex;
+        align-items: center;
+        input{
+            margin-right: 10px;
+        }
+    }
+    }
+}
+//CHECKOUT PAGE
+.cart-checkout{
+    background-color: $prime-col;
+    border-radius: 10px;
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px 40px;
+    width: 800px;
+    max-width: 90%;
+    max-height: 90%;
+    div{
+        color: #111;
+    }
+}
+.form-group{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+

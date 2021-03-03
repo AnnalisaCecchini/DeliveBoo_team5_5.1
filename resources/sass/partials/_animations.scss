@@ -6,3 +6,8 @@
         opacity:1;
     }
 }
+@keyframes road{
+    100%{
+        transform: translateX(-1350px);
+    }
+}

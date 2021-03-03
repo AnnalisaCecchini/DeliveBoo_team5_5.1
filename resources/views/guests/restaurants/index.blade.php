@@ -1,21 +1,21 @@
 @extends('layouts.client')
 
 @section('content')
-<body id="index">
+<body class="white-background">
 <div id="filter" class="container">
-    <h1 class="font-weight-bold text-center mt-5 pt-5 mb-3 text-primary">SEARCH YOUR RESTAURANT</h1>
+    <h1 >SEARCH YOUR RESTAURANT</h1>
 
     {{-- SEARCH --}}
-    <div class="searchbar research-container">
-            <label class="text-center" for="name">Insert name or part of the name of the Restaurant: </label>
-            <input type="text" name="name" v-model="name" {{-- v-on:keyup="filter" --}}>
+    <div class="research-container">
+            <label for="name">Insert name or part of the name of the Restaurant: </label>
+            <input class="rest-input" type="text" name="name" v-model="name" {{-- v-on:keyup="filter" --}}>
             {{-- <button @click="filter" 
             >Find Restaurant!
             </button> --}}
-            <p class="text-center mt-2" >And / Or choose what you'd like to eat:</p>
+            <p >And / Or choose what you'd like to eat:</p>
             <ul class="restype-checkbox">
                 @foreach ($restypes as $restype)
-                <div class=" text-center switch-container">
+                <div class="switch-container">
                     <span>{{ $restype->restypes_status }}</span>
                     <li class="toggle">
                         <input type="checkbox" id="{{ $restype->id }}" value="{{ $restype->id }}" v-model="restypes"
@@ -26,17 +26,17 @@
                    
                 @endforeach
             </ul>
-            <div class="d-flex justify-content-center">
-                <button class="text-center btn btn-primary button" @click="filter" > Find !</button>
-            </div>
-                
+            
+                <button class="button" @click="filter" > Find !
+            </button>
                 
            
         
-    </div>
+    </div> 
+
 
     {{-- SHOW RESULTS --}}
-    <div class="text-center mt-3">
+    <div>
         <h4>List of choice, upon your research: </h4>
         <div v-if="filteredRestaurants.length > 0">
             
@@ -66,11 +66,10 @@
 
 </div> 
 
-
              
 </body>
 
  
     
     
-@endsection
+@endsection 

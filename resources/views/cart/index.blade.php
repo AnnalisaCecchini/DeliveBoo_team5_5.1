@@ -1,52 +1,55 @@
-@extends('layouts.app')
+@extends('layouts.client')
 
 @section('content')
-<div class="container">
-   <h1 class="text-center mt-5 mb-5 text-primary font-weight-bold ">YOUR CART</h1>
+<div class="container" id="cart-index">
+     
+        <h1 class="">YOUR CART</h1>
 
-   
-       <table class="searchbar m-auto">
-           <thead>
-            <tr>
+        <!-- piatti e prezzi -->
+      
+            <!-- <div id="tr-voices">
                <th>Name</th>
-               <th class="pr-5">Price Single</th>
-               <th class="pr-5">Price Total</th>
+               <th >Price Single</th>
+               <th >Price Total</th>
                <th>Quantity</th>
-               <th class="text-center">Action</th>
-            </tr>
-           </thead>
-           <tbody> 
+               <th>Action</th>
+            </div> -->
+          
                 @foreach ($cartDishes as $dish)
 
-                <tr>
-                    <td width="200" scope="row">{{ $dish->name }}</td>
-                    <td class="pr-5 text-center">
-                        € {{number_Format($dish->price, 2, ',', '') }}
-                    </td>
-                    <td class="pr-5 text-center">
-                            € {{number_Format(\Cart::session('_token')->get($dish->id)->getPriceSum(), 2, ',', '') }}
+                <div class="cart-info-complete">
+                    <div class="cart-info">
+                        <div  scope="row">{{ $dish->name }}</div>
                         
-                    <td>
-                        <form class="pr-4" action="{{ route('cart.update', $dish->id) }}">
-                            <input name="quantity" type="number" value="{{ $dish->quantity }}">
-                            <input class="btn btn-secondary" type="submit" value="save">
-                        </form>
-                    </td>
-                    <td>
-                        <a class="btn btn-danger" href="{{ route('cart.destroy', $dish->id) }}">Delete</a>
-                    </td>
-                </tr> 
+                            € {{number_Format($dish->price, 2, ',', '') }}
+                       
+                                € {{number_Format(\Cart::session('_token')->get($dish->id)->getPriceSum(), 2, ',', '') }}   
+                        
+                    </div>
+                    <div class="cart-functionalities">
+                        
+                            <form  action="{{ route('cart.update', $dish->id) }}">
+                                <input id="dish-quantity" name="quantity" type="number" value="{{ $dish->quantity }}">
+                                <div class="button"><input  type="submit" value="save"></div>
+                            </form>
+                        
+                        <div class="button"> <a  href="{{ route('cart.destroy', $dish->id) }}">Delete</a> </div>
+                       
+                    </div>
+                </div>
               @endforeach
-           </tbody>
-       </table>
-   
+          
+  
+
+        <!-- prezzo totale -->
         <h3 class="text-center mt-3">
             <span class="font-weight-bold">Total price: </span>
             € {{number_Format(\Cart::session('_token')->getTotal(), 2, ',', '') }}
         </h3>
 
-        <div class="d-flex justify-content-center mt-4"> 
-            <a role="button" class="btn btn-primary" href="{{ route('cart.checkout') }}">Chekout</a>
+        <!-- bottone checkout -->
+        <div class="button"> 
+            <a role="button" href="{{ route('cart.checkout') }}">Chekout</a>
         </div>
 
 

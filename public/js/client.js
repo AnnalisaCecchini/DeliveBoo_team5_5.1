@@ -97,15 +97,15 @@
 window.addEventListener("scroll", function () {
   var header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 0);
-}); //HAMBURGER TOGGLE
-
-function toggleHamburger() {
-  //  const menuToggle = document.querySelector(".toggle-menu");
-  //  menuToggle.classList.toggle("active-menu");
-  console.log("ciaoo togle!");
-}
-
-;
+});
+document.getElementById("toggleHamburger").addEventListener("click", function () {
+  var menuToggle = document.querySelector(".menu");
+  menuToggle.classList.toggle("active-menu");
+});
+document.getElementById("times").addEventListener("click", function () {
+  var menuToggle = document.querySelector(".menu");
+  menuToggle.classList.remove("active-menu");
+});
 
 /***/ }),
 
@@ -116,7 +116,7 @@ function toggleHamburger() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/ilariagalliano/Desktop/DeliveBoo_team5_5.1/resources/js/client.js */"./resources/js/client.js");
+module.exports = __webpack_require__(/*! C:\Users\David\Desktop\DeliveBoo_team5_5.1\resources\js\client.js */"./resources/js/client.js");
 
 
 /***/ })

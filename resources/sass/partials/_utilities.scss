@@ -2,6 +2,10 @@
 .bg-active{  
     background-color: white;
 }
+.white-background{
+    background-color: white;
+    margin-top: 100px;
+  }
 .img-container{
     width: 300px;
     position: absolute;
@@ -60,4 +64,13 @@
 
         }
     }
+}
+.rest-input{
+    max-width: 400px;
+    border-radius: 10px;
+    outline: none;
+    color: #111;
+  }
+.white-background{
+    background-color: white;
 }
