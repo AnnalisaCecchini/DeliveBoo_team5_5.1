@@ -80,7 +80,7 @@
 }
 
 //input
-.main-content .text-todo{
+.text-todo{
     width: 400px;
     height: 40px;
     line-height: 1.5;
@@ -97,4 +97,19 @@
   }
   .text-todo:hover{
     background: #fff;
+  }
+  //fineinput
+  .index-search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .index-search-column{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
   }

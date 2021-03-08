@@ -15,30 +15,30 @@
 </p>
 <!-- immagine ristorante -->
 <div class="rest-logo-container">
-    
+
     @if (!empty($restaurant->path_image))
         <img class="rounded" src="{{ asset('storage/' . $restaurant->path_image) }}" alt="{{ $restaurant->name }}">
     @else
         <img class="rounded"  src="{{ asset('img/smoothie.png' ) }}" alt="{{ $restaurant->name }}">
-    @endif 
+    @endif
 </div>
 <!-- info banner ristorante -->
 <div class="searchbar rest-info-container" width=50% style="background: white">
-   
-    <h5 class="col-6"><span class="font-weight-bold">Delivery Price: </span>€ {{number_Format($restaurant->delivery_price, 2, ',', '') }}</h5>
+
+    <!-- <h5 class="col-6"><span class="font-weight-bold">Prezzo di Spedizione: </span>€ {{number_Format($restaurant->delivery_price, 2, ',', '') }}</h5> -->
     <h5 class="col-6">
-        <span class="font-weight-bold">Address:</span>
+        <span class="font-weight-bold">Indirizzo:</span>
         {{ $restaurant->address }}
     </h5>
 
     @if (!empty($restaurant->min_order))
-        <h5 class="col-6"><span class="font-weight-bold">Min Order: </span>€ {{number_Format($restaurant->min_order, 2, ',', '') }}</h5>
+        <h5 class="col-6"><span class="font-weight-bold">Ordine Minimo: </span>€ {{number_Format($restaurant->min_order, 2, ',', '') }}</h5> 
     @else
-        <h5 class="col-6">Min Order: No Min Order!</h5>
+        <h5 class="col-6">Ordine Minimo: No Ordine Minimo!</h5>
     @endif
-    <h5 class="col-6"><span class="font-weight-bold">Open hours:</span>  {{ $restaurant->open_hours }}</h5>
+    <h5 class="col-6"><span class="font-weight-bold">Orario di Apertura:</span>  {{ $restaurant->open_hours }}</h5>
     <h5 class="col-12 mb-5">
-        <span class="font-weight-bold">Who we are:</span>
+        <span class="font-weight-bold">Chi Siamo:</span>
         {{ $restaurant->body }}
     </h5>
 </div>
@@ -51,47 +51,53 @@
 <div class="dishes-card-container ">
     @forelse ($dishes as $dish)
         @if ($dish->visibility == 1)
-               
+
                 <div class="dish" >
                     @if (!empty($dish->path_image))
-                        <img class="" width=200 src="{{ asset('storage/' . $dish->path_image) }}" alt="{{ $dish->name }}">
-                    @else 
+                    <div class="index-search">
+                        <img class="dish-img" src="{{ asset('storage/' . $dish->path_image) }}" alt="{{ $dish->name }}">
+                    </div>
+                    @else
                         <img class="picturefake " src="{{ asset('img/.png' ) }}" alt="{{ $dish->name }}">
-                    @endif 
+                    @endif
                     <div class="">
                         <div class="">
                             <h5>{{ $dish->name }}</</h5>
                         </div>
-                      
+
                             <!-- <div class="dish-info">{{ $dish->description }}</div> -->
                             <div class="dish-info">
                                 @if ($dish->dishtype_id == 1)
-                                    Appetizer
+                                    Antipasti
                                 @elseif ($dish->dishtype_id == 2)
-                                    Main Course
+                                    Primi
                                 @elseif ($dish->dishtype_id == 3)
-                                    Second
+                                    Secondi
                                 @elseif ($dish->dishtype_id == 4)
-                                    Sides
+                                    Controrni
                                 @elseif ($dish->dishtype_id == 5)
                                     Dessert
                                 @else
-                                    Beverage                                
+                                    Bevande
                                 @endif
                                 {{-- {{ $dish->dishtype_id }} --}}
                             </div>
-                            <div class="dish-price">Price: € {{number_Format($dish->price, 2, ',', '') }}</div>
-                        
-                        <div class="button" ><a href="{{ route('add', $dish->id) }}" id="no-spacing" class="">ADD TO CART</a></div>
+                            <div class="dish-price">Prezzo: € {{number_Format($dish->price, 2, ',', '') }}</div>
+
+                        <div class="index-search">
+                            <div class="button main-btn" ><a href="{{ route('add', $dish->id) }}" id="no-spacing" class="white">Aggiungi
+
+                            </a></div>
+                        </div>
                     </div>
                 </div>
         @endif
     @empty
         {{-- IF THERE ARE NO DISHES / ALL NOT VISIBLES--}}
-        <p class="text-danger">No dishes yet! Come back soon to check!</a></p>
-        <a class="btn btn-primary" href="{{ route('restaurants.index') }}">Come back to the Restaurants list</a>
-    @endforelse 
-</div> 
+        <p class="text-danger">Nessun paitto è ancora nel menu. Prova con un altro!</a></p>
+        <a class="btn btn-primary" href="{{ route('restaurants.index') }}">Torna alla lista dei ristoranti</a>
+    @endforelse
+</div>
 
 
     <!-- Swiper JS -->
@@ -110,9 +116,9 @@
   </script>
 
 
-</div> 
+</div>
 </body>
 
 @endsection
-    
+
 <!--  -->

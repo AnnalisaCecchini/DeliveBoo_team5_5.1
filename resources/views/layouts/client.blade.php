@@ -39,16 +39,16 @@
                             <div class="toggle-menu" id="times"> <i class="fas fa-times"></i></div> 
                              <ul>
                                  <li><a href="{{ url('/') }}">Home</a></li>
-                                 <li><a href="{{ route('restaurants.index') }}">Restaurants</a></li>
+                                 <li><a href="{{ route('restaurants.index') }}">Ristoranti</a></li>
                                  <li><a href="{{ route('login') }}">Login</a></li>
-                                 <li><a href="{{ route('register') }}">Register</a></li>
-                                 <li><a href="{{ route('cart.index') }}">Cart</a></li>
+                                 <li><a href="{{ route('register') }}">Registrati</a></li>
+                                 <li><a href="{{ route('cart.index') }}">Carrello</a></li>
                              </ul>      
                         </div>
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-ul">
                             <li class="button button__search" id="search-restaurant">
-                                <a  href="{{ route('restaurants.index') }}">Search Restaurant</a>
+                                <a  href="{{ route('restaurants.index') }}">Cerca Ristorante</a>
                             </li>
                         </ul>
 
@@ -61,12 +61,12 @@
                                 </li>
                                 @if (Route::has('register'))
                                     <li class="button" >
-                                        <a  href="{{ route('register') }}">{{ __('Register') }}</a>
+                                        <a  href="{{ route('register') }}">{{ __('Registrati') }}</a>
                                     </li>
                                 @endif
                                 <li class="button">
                                     <a class="nav-link" href="{{ route('cart.index') }}">
-                                     Cart
+                                     Carrello
 
                                     <div class="m-1 badge badge-primary">
                                         {{\Cart::session('_token')->getContent()->count()}}

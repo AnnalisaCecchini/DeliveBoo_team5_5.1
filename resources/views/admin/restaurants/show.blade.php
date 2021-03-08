@@ -31,7 +31,7 @@
 
     <div class="d-flex justify-content-center">
         <a class="btn btn-primary m-2 mb-4" href="{{ route('admin.dishes.index', $restaurant->slug) }}">Manage Food</a>
-        <a class="btn btn-primary m-2 mb-4" href="{{ route('admin.dishes.index', $restaurant->slug) }}">Manage Orders</a>
+        <!-- <a class="btn btn-primary m-2 mb-4" href="{{ route('admin.dishes.index', $restaurant->slug) }}">Manage Orders</a> -->
     </div>
 
     <ul class="list-group">

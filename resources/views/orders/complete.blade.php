@@ -1,8 +1,10 @@
 @extends('layouts.client')
 @section("content")
     <div id="order-title">
-        <h1>The order has been taken on charge. We'll arrive as soon as possible!</h1>
-        <div class="button"><a href="">Go back to homepage</a></div>
+        <h1>OK! L'ordine è stato preso in carico. Arriveremo il più presto possibile</h1>
+        <div class="order-btn-container index-search">
+            <div id="width-200" class="button index-search main-btn"><a class="white"  href="{{ url('/') }}">Homepage</a></div>
+        </div>
     </div>
     <div class="hero">
         <div class="road">

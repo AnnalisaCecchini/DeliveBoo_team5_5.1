@@ -104,7 +104,7 @@ function bgChanger() {
 
 window.addEventListener("scroll", bgChanger); //HOMEPAGE TYPING ANIMATION FUNCTION
 
-var texts = ["fast ", "delicious ", "cheap "];
+var texts = ["veloce ", "delizioso ", "conveniente "];
 var count = 0;
 var index = 0;
 var currentText = "";

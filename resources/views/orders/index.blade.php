@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.client')
 
 @section('content')
 <style>
@@ -10,71 +10,74 @@
         border-radius: .25rem;
     }
 </style>
-<div class="container">
-        {{-- in case of success --}}
-        @if (session('success_message'))
-            <div class="alert alert-success">
-                {{ session('success_message') }}
-            </div>
-        @endif
+<div class="index-search">
+  <div class="container research-container">
+          {{-- in case of success --}}
+          @if (session('success_message'))
+              <div class="alert alert-success">
+                  {{ session('success_message') }}
+              </div>
+          @endif
 
-        {{-- in case of error --}}
-        @if(count($errors) > 0)
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
+          {{-- in case of error --}}
+          @if(count($errors) > 0)
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+          @endif
 
-    <h2>Payment</h2>
-    <form action="{{ route('orders.complete') }}" method="POST" id="payment-form">
-        @csrf
-        @method('POST')
-   
-        <div class="form-group">
-            <label for="name_on_card">Name on Card</label>
-            <input type="text" class="form-control" id="name_on_card" name="name_on_card">
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="amount">Amount</label>
-                    <input type="text" class="form-control" id="amount" name="amount" value="{{$total}}">
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <label for="cc_number">Credit Card Number</label>
-            <div class="form-group" id="card-number">
-            </div>
-        </div>
-        <div class="col-md-3">
-            <label for="expiry">Expiry</label>
-            <div class="form-group" id="expiration-date">
-            </div>
-        </div>
+      <h2 class="second-col">Pagamento</h2>
+      <form class="index-search-column" action="{{ route('orders.complete') }}" method="POST" id="payment-form">
+          @csrf
+          @method('POST')
+    
+          <div class="col-md-6"> 
+              <label for="name_on_card">Nome sulla carta</label>
+              <input type="text" class="form-control" id="name_on_card" name="name_on_card">
+              <div class="form-group">
+              </div>
+          </div>
+              <div class="col-md-6">
+                  
+                      <label for="amount">Totale</label>
+                      <input type="text" class="form-control" id="amount" name="amount" value="{{$total}}">
+                  <div class="form-group">
+                  </div>
+              </div>
+         
+          <div class="col-md-6">
+              <label for="cc_number">Numero carta di credito</label>
+              <div class="form-group" id="card-number">
+              </div>
+          </div>
+          <div class="col-md-6">
+              <label for="expiry">Data di scadenza</label>
+              <div class="form-group" id="expiration-date">
+              </div>
+          </div>
 
-        <div class="col-md-3">
-            <label for="cvv">CVV</label>
+          <div class="col-md-6">
+              <label for="cvv">CVV</label>
 
-            <div class="form-group" id="cvv">
+              <div class="form-group" id="cvv">
 
-            </div>
-        </div>
+              </div>
+          </div>
 
-        <div class="spacer"></div>
-        <div id="paypal-button"></div>
-        <div class="spacer"></div>
-        <input id="nonce" name="payment_method_nonce" type="hidden" />
-        <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-success">Submit Payment</button>
-        </div>
-    </form>
+          <div class="spacer"></div>
+          <div id="paypal-button"></div>
+          <div class="spacer"></div>
+          <input id="nonce" name="payment_method_nonce" type="hidden" />
+          <div class="d-flex justify-content-center">
+              <button type="submit" class="button main-btn">Paga</button>
+          </div>
+      </form>
+  </div>
 </div>
-
 <script src="https://js.braintreegateway.com/web/3.73.1/js/client.min.js"></script>
 <script src="https://js.braintreegateway.com/web/3.73.1/js/hosted-fields.min.js"></script>
 <script>
@@ -98,6 +101,12 @@
       styles: {
         'input': {
           'font-size': '14px'
+        },
+        'input': {
+          'width': '400px'
+        },
+        'input': {
+          'box-shadow': '0 15px 10px -10px rgba(0,0,0, .4)'
         },
         'input.invalid': {
           'color': 'red'

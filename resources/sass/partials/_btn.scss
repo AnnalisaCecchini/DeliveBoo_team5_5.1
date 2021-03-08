@@ -53,11 +53,30 @@
         backdrop-filter: blur(15px);
         
     }
+    a.white,input.white{
+        outline: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255,255,255,0.1);
+        border: 1px solid $second-col;
+        border-radius: 10px;
+        color: white;
+        z-index: 1;
+        text-decoration: none;
+        transition: 0.4s;
+        backdrop-filter: blur(15px);
+        
+    }
 }
 //hover
 .button:hover a{
     text-decoration: none;
-    letter-spacing: 3px;
 }
 #search-restaurant.button:hover a,
 #research-button.button:hover a{
@@ -66,6 +85,7 @@
 #learn-more.button a{
     color: $prime-col;
     background-color: $second-col;
+    width: 250px;
 }
 .button:hover a::before{
     text-decoration: none;
@@ -91,10 +111,18 @@
     transform: skewX(45deg) translateX(0);
     transition: 0.5s;
 }
-#no-spacing{
-    letter-spacing: 0;
-}
 .real-btn{
     border: none;
     background-color: $prime-col;
 }
+.main-btn{
+    color: white;
+    background-color: #0cb;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+ #width-200{
+     width: 200px;
+     font-weight: 600;
+ }

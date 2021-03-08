@@ -10,7 +10,7 @@
 window.addEventListener("scroll",bgChanger);
 
  //HOMEPAGE TYPING ANIMATION FUNCTION
- const texts = ["fast ","delicious ","cheap "];
+ const texts = ["veloce ","delizioso ","conveniente "];
 
  let count = 0;
 
