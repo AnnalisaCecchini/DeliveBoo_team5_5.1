@@ -22,7 +22,7 @@ window.addEventListener("scroll",bgChanger);
       if (count === texts.length){
           count = 0;
       }
-      currentText = texts[count];
+      currentText = texts[count]; 
       letter = currentText.slice(0, ++index);
       document.querySelector(".typing").textContent = letter;
       if(letter.length === currentText.length){

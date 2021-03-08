@@ -116,7 +116,7 @@ document.getElementById("times").addEventListener("click", function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\David\Desktop\DeliveBoo_team5_5.1\resources\js\client.js */"./resources/js/client.js");
+module.exports = __webpack_require__(/*! C:\Users\David\Desktop\DeliveBoo_secondlast\resources\js\client.js */"./resources/js/client.js");
 
 
 /***/ })

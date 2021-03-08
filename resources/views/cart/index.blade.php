@@ -3,17 +3,8 @@
 @section('content')
 <div class="container" id="cart-index">
      
-        <h1 class="">YOUR CART</h1>
+        <h1 class="second-col">YOUR CART</h1>
 
-        <!-- piatti e prezzi -->
-      
-            <!-- <div id="tr-voices">
-               <th>Name</th>
-               <th >Price Single</th>
-               <th >Price Total</th>
-               <th>Quantity</th>
-               <th>Action</th>
-            </div> -->
           
                 @foreach ($cartDishes as $dish)
 
@@ -21,9 +12,9 @@
                     <div class="cart-info">
                         <div  scope="row">{{ $dish->name }}</div>
                         
-                            € {{number_Format($dish->price, 2, ',', '') }}
+                               <div class="rest-typology">€ {{number_Format($dish->price, 2, ',', '') }}</div> 
                        
-                                € {{number_Format(\Cart::session('_token')->get($dish->id)->getPriceSum(), 2, ',', '') }}   
+                            <div class="rest-typology"> € {{number_Format(\Cart::session('_token')->get($dish->id)->getPriceSum(), 2, ',', '') }}   </div>   
                         
                     </div>
                     <div class="cart-functionalities">

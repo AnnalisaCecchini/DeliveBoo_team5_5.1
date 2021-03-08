@@ -76,12 +76,12 @@
 
                             @else
                                 <li >
-                                    <li >
-                                        <a  href="{{ route('admin.home') }}">Dashboard</a>
+                                    <li  class="button">
+                                        <a id="no-spacing" href="{{ route('admin.home') }}">Dashboard</a>
                                     </li>
                                     
-                                    <li >
-                                        <a  href="{{ route('admin.restaurants.create') }}">Crea ristorante</a>
+                                    <li  class="button"  >
+                                        <a id="no-spacing" href="{{ route('admin.restaurants.create') }}">Crea ristorante</a>
                                     </li>
 
 

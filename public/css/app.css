@@ -103,6 +103,11 @@
   letter-spacing: 0;
 }
 
+.real-btn {
+  border: none;
+  background-color: #ecf7d6;
+}
+
 @-webkit-keyframes blink {
   0% {
     opacity: 0;
@@ -142,6 +147,10 @@
 .white-background {
   background-color: white;
   margin-top: 100px;
+}
+
+.second-col {
+  color: #0cb;
 }
 
 .img-container {
@@ -217,10 +226,31 @@
   border-radius: 10px;
   outline: none;
   color: #111;
+  border: 1px solid #0cb;
 }
 
 .white-background {
   background-color: white;
+}
+
+.main-content .text-todo {
+  width: 400px;
+  height: 40px;
+  line-height: 1.5;
+  background: rgba(255, 255, 255, 0.75);
+  border: 0;
+  border-radius: 5px;
+  font-size: 18px;
+  color: black;
+  padding: 20px;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.4);
+  outline: none;
+  transition: background 0.4s;
+  cursor: pointer;
+}
+
+.text-todo:hover {
+  background: #fff;
 }
 
 /*!
@@ -11167,19 +11197,6 @@ a.text-dark:focus {
   }
 }
 
-.swiper-container {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
-}
-
 body {
   overflow-x: hidden;
 }
@@ -11352,10 +11369,15 @@ header #header-navbar #navbar-links {
   align-items: center;
 }
 
+#filter {
+  margin-top: 100px 0 50px 10px;
+}
+
 #restaurants-filtered {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   padding: 0;
 }
 
@@ -11375,10 +11397,16 @@ header #header-navbar #navbar-links {
   font-weight: 600;
 }
 
+.research-container p {
+  margin: 40px 0 0 0;
+}
+
 .restype-checkbox {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  padding: 0;
+  margin: 40px 0 0 0;
 }
 
 .rest-logo-container {
@@ -11436,11 +11464,15 @@ header #header-navbar #navbar-links {
 }
 
 #cart-index #dish-quantity {
-  width: 100px;
-  height: 25px;
+  width: 70px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #ecf7d6;
   color: #0cb;
   font-size: 17px;
+  font-weight: 600;
   text-align: center;
+  border: 1px solid #0cb;
 }
 
 #cart-index #tr {
@@ -11453,6 +11485,9 @@ header #header-navbar #navbar-links {
 
 .cart-info-complete {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
 }
 
 .cart-info-complete .cart-functionalities,
@@ -11484,6 +11519,11 @@ header #header-navbar #navbar-links {
   width: 800px;
   max-width: 90%;
   max-height: 90%;
+}
+
+.cart-checkout h4 {
+  margin-bottom: 50px;
+  font-size: 20px;
 }
 
 .cart-checkout div {
@@ -11604,6 +11644,10 @@ header #header-navbar #navbar-links {
     height: 125px;
   }
 
+  .toggle input[type=checkbox] + label {
+    margin: 5px;
+  }
+
   #cart-index #tr {
     display: flex;
     flex-direction: column;
@@ -11616,6 +11660,7 @@ header #header-navbar #navbar-links {
   .cart-info-complete {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .cart-info-complete .cart-functionalities,
@@ -11630,6 +11675,9 @@ header #header-navbar #navbar-links {
   .research-container {
     flex-direction: column;
     padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
   }
 
   .rest-input {
@@ -11749,7 +11797,7 @@ header #header-navbar #navbar-links {
   width: 40px;
   height: 15px;
   border-radius: 20px;
-  margin: 0;
+  margin: 15px;
   cursor: pointer;
   box-shadow: inset -6px -6px 15px rgba(247, 243, 243, 0.1), inset 8px 8px 8px rgba(37, 36, 36, 0.25);
 }
@@ -11773,5 +11821,38 @@ header #header-navbar #navbar-links {
   content: "";
   background-color: #0cb;
   box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.5), 2px 2px 5px rgba(255, 255, 255, 0.2);
+}
+
+.dishes-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dishes-card-container .dish {
+  background-color: #ecf7d6;
+  width: 300px;
+  max-width: 80%;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.dishes-card-container .dish .dish-info {
+  font-size: 15px;
+  font-weight: 400;
+  max-width: 100%;
+  padding: 5px;
+}
+
+.dishes-card-container .dish .dish-price {
+  font-weight: 600;
+}
+
+.dishes-card-container .dish .button {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
 }
 

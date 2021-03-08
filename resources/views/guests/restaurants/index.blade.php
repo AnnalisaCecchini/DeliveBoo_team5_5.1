@@ -1,18 +1,17 @@
 @extends('layouts.client')
 
 @section('content')
-<body class="white-background">
-<div id="filter" class="container">
-    <h1 >SEARCH YOUR RESTAURANT</h1>
+
+<div id="filter" class="container" style="padding-left: 0px;padding-right: 0px;">
+  
 
     {{-- SEARCH --}}
     <div class="research-container">
-            <label for="name">Insert name or part of the name of the Restaurant: </label>
+            <label class="second-col" for="name">SEARCH YOUR RESTAURANT: </label>
             <input class="rest-input" type="text" name="name" v-model="name" {{-- v-on:keyup="filter" --}}>
             {{-- <button @click="filter" 
             >Find Restaurant!
             </button> --}}
-            <p >And / Or choose what you'd like to eat:</p>
             <ul class="restype-checkbox">
                 @foreach ($restypes as $restype)
                 <div class="switch-container">
@@ -27,7 +26,7 @@
                 @endforeach
             </ul>
             
-                <button class="button" @click="filter" > Find !
+                <button class="button real-btn" @click="filter" > <a > Find !</a>
             </button>
                 
            
@@ -49,9 +48,9 @@
         <ul id="restaurants-filtered">
             <li  v-for="filteredRestaurant in filteredRestaurants">
                <div  class="container-card">
-                     <div class="card" id="zumba">
+                     <div class="card" >
                          <div class="img-bx">
-                            <img class="rounded" width=200 src="{{ asset('img/pizza.png' ) }}" alt="">
+                            <img class="rounded" width=200 src="{{ asset('img/deliveroo-logo.png')}}" alt="">
                          </div>
                          <div class="content-bx">
                              <h2>@{{ filteredRestaurant.name }}</h2>
@@ -66,8 +65,9 @@
 
 </div> 
 
-             
-</body>
+         <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}" defer></script>    
+
 
  
     

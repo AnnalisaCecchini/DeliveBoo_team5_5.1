@@ -6,6 +6,9 @@
     background-color: white;
     margin-top: 100px;
   }
+.second-col{
+    color: $second-col;
+}
 .img-container{
     width: 300px;
     position: absolute;
@@ -70,7 +73,28 @@
     border-radius: 10px;
     outline: none;
     color: #111;
+    border: 1px solid $second-col;
   }
 .white-background{
     background-color: white;
 }
+
+//input
+.main-content .text-todo{
+    width: 400px;
+    height: 40px;
+    line-height: 1.5;
+    background: rgba(255,255,255, .75);
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    color: black;
+    padding: 20px;
+    box-shadow: 0 15px 10px -10px rgba(0,0,0, .4);
+    outline: none;
+    transition: background .4s;
+    cursor: pointer;
+  }
+  .text-todo:hover{
+    background: #fff;
+  }

@@ -15,12 +15,12 @@
 </p>
 <!-- immagine ristorante -->
 <div class="rest-logo-container">
-    {{-- {-- IMG ! empty --}}
-    {{-- @if (!empty($restaurant->path_image))
+    
+    @if (!empty($restaurant->path_image))
         <img class="rounded" src="{{ asset('storage/' . $restaurant->path_image) }}" alt="{{ $restaurant->name }}">
-    @else --}}
+    @else
         <img class="rounded"  src="{{ asset('img/smoothie.png' ) }}" alt="{{ $restaurant->name }}">
-    {{-- @endif --}}
+    @endif 
 </div>
 <!-- info banner ristorante -->
 <div class="searchbar rest-info-container" width=50% style="background: white">
@@ -47,24 +47,24 @@
 {{-- MENU --}}
 <h3 class="my-5 text-center"> <span class="font-weight-bold">MENU</span>: </h3>
 {{-- IF THERE ARE DISHES , VISIBLE --}}
-<div class="swiper-container">
-<div class="dishes-card-container swiper-wrapper">
+
+<div class="dishes-card-container ">
     @forelse ($dishes as $dish)
         @if ($dish->visibility == 1)
-                {{-- PRODUCT CARDS --}}
-                <div class="swiper-slide" style="width: 18rem;">
-                    {{-- @if (!empty($dish->path_image))
+               
+                <div class="dish" >
+                    @if (!empty($dish->path_image))
                         <img class="" width=200 src="{{ asset('storage/' . $dish->path_image) }}" alt="{{ $dish->name }}">
-                    @else --}}
+                    @else 
                         <img class="picturefake " src="{{ asset('img/.png' ) }}" alt="{{ $dish->name }}">
-                    {{-- @endif --}}
+                    @endif 
                     <div class="">
                         <div class="">
                             <h5>{{ $dish->name }}</</h5>
                         </div>
                       
-                            <div class="list-group-item">{{ $dish->description }}</div>
-                            <div class="list-group-item">
+                            <!-- <div class="dish-info">{{ $dish->description }}</div> -->
+                            <div class="dish-info">
                                 @if ($dish->dishtype_id == 1)
                                     Appetizer
                                 @elseif ($dish->dishtype_id == 2)
@@ -80,9 +80,9 @@
                                 @endif
                                 {{-- {{ $dish->dishtype_id }} --}}
                             </div>
-                            <div class="">Price: € {{number_Format($dish->price, 2, ',', '') }}</div>
+                            <div class="dish-price">Price: € {{number_Format($dish->price, 2, ',', '') }}</div>
                         
-                        <div class="button"><a href="{{ route('add', $dish->id) }}" class="">ADD TO CART</a></div>
+                        <div class="button" ><a href="{{ route('add', $dish->id) }}" id="no-spacing" class="">ADD TO CART</a></div>
                     </div>
                 </div>
         @endif
@@ -92,33 +92,21 @@
         <a class="btn btn-primary" href="{{ route('restaurants.index') }}">Come back to the Restaurants list</a>
     @endforelse 
 </div> 
-<!-- Add Pagination -->
-<div class="swiper-pagination"></div>
-</div>
 
-    
-  </div>
+
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
      <!-- Initialize Swiper -->
      <script>
-    var swiper = new Swiper('.swiper-container', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      },
-      pagination: {
-        el: '.swiper-pagination',
-      },
-    });
+        var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        });
   </script>
 
 
@@ -127,3 +115,4 @@
 
 @endsection
     
+<!--  -->

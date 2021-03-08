@@ -9,11 +9,15 @@
     width: 800px;
     max-width: 90%;
     #dish-quantity{
-        width: 100px;
-        height: 25px;
+        width: 70px;
+        height: 35px;
+        border-radius: 5px;
+        background-color: $prime-col;
         color: $second-col;
         font-size: 17px;
+        font-weight: 600;
         text-align: center;
+        border:1px solid $second-col;
     }
     #tr{
         display: flex;
@@ -25,6 +29,9 @@
 }
 .cart-info-complete{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
     .cart-functionalities,
     .cart-info{
     display: flex;
@@ -51,6 +58,10 @@
     width: 800px;
     max-width: 90%;
     max-height: 90%;
+    h4{
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
     div{
         color: #111;
     }

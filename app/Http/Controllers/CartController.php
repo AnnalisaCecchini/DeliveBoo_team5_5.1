@@ -23,7 +23,7 @@ class CartController extends Controller
             'associatedModel' =>  $dish
         ));
 
-        return redirect()->route('cart.index');
+        return back();
     }
 
     public function index(){

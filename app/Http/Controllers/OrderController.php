@@ -75,7 +75,9 @@ class OrderController extends Controller
         // to generate the token 
         $token = $gateway->ClientToken()->generate();
 
-        return view('orders.index', ['token' => $token]);
+        $total = \Cart::session('_token')->getTotal();
+        
+        return view('orders.index', ['token' => $token], ['total' => $total]);
 
        /*  if($sav){
             // Se restypes_status non è vuoto, fare questo per unire i restypes e i restaurant nella pivot 
